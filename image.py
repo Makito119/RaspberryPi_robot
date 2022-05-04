@@ -79,12 +79,6 @@ def hsv_histogram(img1, mask):
     ax.set_xlabel("Pixel Value")
     plot_hist(bins, hist, color="k")
     plt.show()
-    #hist_v = cv2.calcHist([v], [0], mask, [256], [0, 256])
-    # plt.plot(hist_h, color='r', label="Hue")
-    # #plt.plot(hist_s, color='g', label="Saturation")
-    # #plt.plot(hist_v, color='b', label="Value")
-    # plt.legend()
-    # plt.show()  # plotで３チャンネル表を出す
 
 
 # maskは物体のみの白黒画像、srcは物体背景画像
