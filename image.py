@@ -31,24 +31,6 @@ def video_to_image(name):
     cap.release()
 
 
-# RGB３チャンネルのヒストグラム表
-"""
-b, g, r = cv2.split(img_1)
-r_avg = r.mean()
-g_avg = g.mean()
-b_avg = b.mean()
-print(r_avg, g_avg, b_avg)
-hist_b = cv2.calcHist([b], [0], None, [256], [0, 256])
-hist_g = cv2.calcHist([g], [0], None, [256], [0, 256])
-hist_r = cv2.calcHist([r], [0], None, [256], [0, 256])
-plt.plot(hist_r, color='r', label="r")
-plt.plot(hist_g, color='g', label="g")
-plt.plot(hist_b, color='b', label="b")
-plt.legend()
-plt.show()
-"""
-
-
 # HSV特徴量の抽出
 def hsv_data(img1, mask):
     img = cv2.cvtColor(img1, cv2.COLOR_BGR2HSV)
@@ -258,12 +240,7 @@ def circularity1(mask):
     return en
 
 
-if __name__ == "__main__":
-    img=cv2.imread("photograph/ringo/1_2.jpg")
-    dst = cv2.resize(img, dsize=(853, 480))
-    cv2.imshow('s',dst)
-    cv2.waitKey(0)
-    cv2.imwrite("ringo.jpg",dst)
+
 
 
 
